@@ -1,14 +1,14 @@
-## Reweet Bot 
+## RobotsBot 
 
-Retweets the latest tweet using the **"#MeetMaye"** hashtag. 
+Retweets the latest tweet using the **"#robotosnft, #robotos, #beepboop"** hashtag. 
 It attempts to retweet once per hour. You can always change the # to fit your needs.
 
 ### Install twit
 
-Install twit while in the ./bot/ folder. The library that lets us talk to Twitter.
+Install twit while in the project folder. The library that lets us talk to Twitter.
 
 ```bash
-npm i twit
+yarn add twit
 ```
  
 ### Connecting to Twitter 
@@ -17,7 +17,7 @@ npm i twit
  
  - Next you'll see a screen with a "Details" tab. Setup the App and "Application Type", choose "Read and Write". 
 
-### Create an empty config.js file in the ./bot folder
+### Create an empty config.js file in the project folder
 
 Then go to the Keys and Access Tokens tab, you will need this data to setup our **config.js** as shown below.
  
@@ -34,7 +34,7 @@ In between those quotes, instead of `'key'`, paste the appropriate info from the
 
 ### Run the app
 
-Now type the following in the command line while in the ./bot folder directory
+Now type the following in the command line while in the project folder directory
  
 ```bash
 node bot.js

@@ -5,7 +5,7 @@ const Twit = require("twit");
 const twit = new Twit(require("./config.js"));
 
 // This is the URL of a search for the latest tweets on the '#MeetMaye' hashtag...
-const mediaArtsSearch = { q: "(#robotosnft OR #Robotosnft OR #RobotosNFT OR #robotos OR #Robotosnft OR #Robotos) (@robotosNFT)", count: 1000, result_type: "recent" };
+const mediaArtsSearch = { q: "(#robotos OR #robotosnft OR @robotosNFT)", count: 1000, result_type: "recent" };
 
 // This function finds the latest tweet with the MeetMaye hashtag and retweets.
 const retweetLatest = () => {

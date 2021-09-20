@@ -4,9 +4,9 @@ const Twit = require("twit");
 // We need to include our configuration file...
 const twit = new Twit(require("./config.js"));
 
-// This is the URL of a search for the latest tweets on the '#robotosnft' hashtag...
-const mediaArtsSearch = { q: "(@robotosNFT OR #robotosnft OR #robotonft OR #robotos OR #roboto OR #roborevolution OR #robotorevolution OR #robotosuinte OR #emojibot OR #emojibots OR #robotosofficial OR #robotosoriginals OR #robotosrevolution OR #robopets OR #robotopets OR #robotosworkshop OR #roboworkshop OR #robotosgenesis OR #welovethebotos OR #botsfollowbots)", count: 100, result_type: "recent" };
-// This function finds the latest tweet with the robotosnft hashtag and retweets.
+// This is the URL of a search for the latest tweets on containing a list of hashtags...
+const mediaArtsSearch = { q: "(#robotosnft OR #robotonft OR #robotos OR #roboto OR #roborevolution OR #robotorevolution OR #robotosuinte OR #emojibot OR #emojibots OR #robotosofficial OR #robotosoriginals OR #robotosrevolution OR #robopets OR #robotopets OR #robotosworkshop OR #roboworkshop OR #robotosgenesis OR #welovethebotos OR #botsfollowbots)", count: 100, result_type: "recent"};
+// This function finds the latest tweets conntaining hashtags from the list and retweets.
 const retweetLatest = () => {
   twit.get("search/tweets", mediaArtsSearch, (error, data) => {
     // If our search request to the server had no errors...
@@ -20,6 +20,7 @@ const retweetLatest = () => {
       twit.post("statuses/retweet/" + retweetId, {}, (error, response) => {
         if (response) {
           console.log("Success! Your bot has retweeted something.");
+          // console.log("Success! Your bot has retweeted: https://twitter.com/robotosbot/status/" + retweetId);
         }
         // If there was an error with our Twitter call, we print it out here...
         if (error) {

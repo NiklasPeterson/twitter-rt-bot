@@ -5,7 +5,7 @@ const Twit = require("twit");
 const twit = new Twit(require("./config.js"));
 
 // This is the URL of a search for the latest tweets on containing a list of hashtags...
-const mediaArtsSearch = { q: "(#robotosnft OR #robotonft OR #robotos OR #roboto OR #roborevolution OR #robotorevolution OR #robotosuinte OR #emojibot OR #emojibots OR #robotosofficial OR #robotosoriginals OR #robotosrevolution OR #robopets OR #robotopets OR #robotosworkshop OR #roboworkshop OR #robotosgenesis OR #welovethebotos OR #botsfollowbots OR #robotosbotnewsletter OR #suitedupboto OR #coloringbotos OR #robopetscoloringcontest OR #robotoscontest OR #drawtheboto OR #coloringrobopets)", count: 100, result_type: "recent"};
+const mediaArtsSearch = { q: "(#robotosnft OR #robotos OR #roboto OR #robopets OR #robopet OR #welovethebotos OR #botosfollowbotos)", count: 100, result_type: "recent"};
 // This function finds the latest tweets conntaining hashtags from the list and retweets.
 const retweetLatest = () => {
   twit.get("search/tweets", mediaArtsSearch, (error, data) => {

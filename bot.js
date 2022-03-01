@@ -2,10 +2,14 @@
 const Twit = require("twit");
 
 // We need to include our configuration file...
-const twit = new Twit(require("./config.js"));
+const twit = new Twit(require("./config/config"));
 
 // This is the URL of a search for the latest tweets on containing a list of hashtags...
-const mediaArtsSearch = { q: "(#robotosnft OR #robotos OR #robopets OR #welovethebotos OR #botosfollowbotos)", count: 100, result_type: "recent"};
+const mediaArtsSearch = {
+  q: "(#robotosnft OR #robotos OR #robopets OR #welovethebotos OR #botosfollowbotos)",
+  count: 100,
+  result_type: "recent",
+};
 // This function finds the latest tweets conntaining hashtags from the list and retweets.
 const retweetLatest = () => {
   twit.get("search/tweets", mediaArtsSearch, (error, data) => {

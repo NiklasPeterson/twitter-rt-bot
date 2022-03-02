@@ -2,9 +2,9 @@
   "name": "robotosbot",
   "version": "1.0.0",
   "description": "Robotos Bot",
-  "main": "./config.js",
+  "main": "./index.js",
   "scripts": {
-    "start": "node ./bot.js"
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",

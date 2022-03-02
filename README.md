@@ -1,6 +1,6 @@
 ## RobotsBot
 
-Retweets the latest tweet using the **"#robotosnft, #robotos, #beepboop"** hashtag.
+Retweets the latest tweet using with specific hashtags.
 It attempts to retweet once per hour. You can always change the # to fit your needs.
 
 ### Install twit

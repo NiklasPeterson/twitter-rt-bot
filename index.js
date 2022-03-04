@@ -6,7 +6,7 @@ const twit = new Twit(require("./config/config"));
 
 // This is the URL of a search for the latest tweets on containing a list of hashtags...
 const mediaArtsSearch = {
-  q: "(#robotosnft OR #robotos OR #robopets OR #welovethebotos OR #botosfollowbotos)",
+  q: "(#robotosnft OR #robopets OR #welovethebotos OR #botosfollowbotos)",
   count: 100,
   result_type: "recent",
 };
@@ -37,6 +37,6 @@ const retweetLatest = () => {
 
 // Try to retweet something as soon as we run the program...
 retweetLatest();
-// ...and then every hour/half thereafter. Time here is in milliseconds, so
+// ...and then every minute thereafter. Time here is in milliseconds, so
 // 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60
 setInterval(retweetLatest, 1000 * 60);

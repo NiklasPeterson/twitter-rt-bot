@@ -6,7 +6,7 @@ const twit = new Twit(require("./config/config"));
 
 // This is the URL of a search for the latest tweets on containing a list of hashtags...
 const mediaArtsSearch = {
-  q: "(#robotosnft OR #robopets OR #welovethebotos OR #botosfollowbotos)",
+  q: "(#robotosnft OR #robopets OR #welovethebotos OR #botosfollowbotos OR ##robotosintokyo)",
   count: 100,
   result_type: "recent",
 };

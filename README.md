@@ -1,4 +1,4 @@
-## RobotsBot
+## Twitter Retweet bot
 
 Retweets the latest tweet using with specific hashtags.
 It attempts to retweet once per hour. You can always change the # to fit your needs.

@@ -6,7 +6,7 @@ const twit = new Twit(require("./config/config"));
 
 // This is the URL of a search for the latest tweets on containing a list of hashtags...
 const mediaArtsSearch = {
-  q: "(#robotosnft OR #robopets OR #welovethebotos OR #botosfollowbotos OR #robotosintokyo)",
+  q: "(#first OR #second)",
   count: 100,
   result_type: "recent",
 };
@@ -24,7 +24,6 @@ const retweetLatest = () => {
       twit.post("statuses/retweet/" + retweetId, {}, (error, response) => {
         if (response) {
           console.log("Success! Your bot has retweeted something.");
-          // console.log("Success! Your bot has retweeted: https://twitter.com/robotosbot/status/" + retweetId);
         }
         // If there was an error with our Twitter call, we print it out here...
         if (error) {

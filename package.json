@@ -2,9 +2,9 @@
   "name": "robotosbot",
   "version": "1.0.0",
   "description": "Robotos Bot",
-  "main": "./index.js",
+  "main": "./index.mjs",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.mjs"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "ms": "^2.1.3",
-    "twit": "^2.2.11"
+    "got": "^13.0.0",
+    "needle": "^3.2.0",
+    "oauth-1.0a": "^2.2.6"
   }
 }
